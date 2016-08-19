@@ -10,39 +10,35 @@
   
     </div>
 
-    <div  class="col-md-10  container-fluid">
+    <div  class="col-sm-12 col-md-10  container-fluid">
             <div class="jumbotron">
-                  
-                    <table >
-                        <tr>
-                            <td>    
-                                <h2 class="text-muted text-center">{{vm.book.Title}}</h2>
-                            </td>
-                        </tr>
+                <div class="page-header">
+                    <h2>{{vm.book.Title}}</h2>
+                    <h2><small>{{vm.book.SubTitle}}</small></h2>
+                </div>
+                    <table class = "table table-condensed">
                          <tr>
                                 <td>
-                                
-                                    <p>{{vm.book.SubTitle}}</p>
+                                    
                                     <p><strong>Author: </strong> {{vm.book.Author}}</p>
                                     <p><strong>Publisher: </strong>{{vm.book.Publisher}}</p>
                                     <p><strong>Year: </strong>{{vm.book.Year}}</p>
                                     <p><strong>Page: </strong>{{vm.book.Page}}</p>
-                                    <a class="btn btn-info btn-lg" ng-href="{{vm.book.Download}}" role="button">Download</a>
+                                    <a class="btn btn-success" ng-href="{{vm.book.Download}}" role="button">Download</a>
                                 </td> 
+
                                 <td>
-                                    <img ng-src="{{vm.book.Image}}" class="img-fluid" alt="Responsive image">
-                                    
+                                    <div class="pull-right">    
+                                        <img ng-src="{{vm.book.Image}}" class="img-fluid" alt="Responsive image">
+                                    </div>
                                 </td>
                          </tr>   
                     </table>
                     <hr>
-                    <p class="text-justify">{{vm.book.Description}}</p>
+            <div>
+                <p class="text-justify">{{vm.book.Description}}</p>
+            </div>                   
                   
-                  
-                  
-                  
-                  
-           </div>
-                        
+           
     </div>
 
