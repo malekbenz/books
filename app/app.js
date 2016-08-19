@@ -3,6 +3,11 @@ angular.module("pizzaApp",["ngRoute"])
 
         .config(function($routeProvider) {
             $routeProvider
+            .when("/book/:id", {
+                templateUrl : "views/book.html",
+                controller : "book as vm"
+
+            })
             .when("/:title/:page", {
                 templateUrl : "views/main.html",
                 controller : "main as vm"
@@ -11,11 +16,6 @@ angular.module("pizzaApp",["ngRoute"])
             .when("/", {
                 templateUrl : "views/main.html",
                 controller : "main as vm"
-
-            })
-            .when("/book/:id", {
-                templateUrl : "views/book.html",
-                controller : "book as vm"
 
             })
             .otherwise({redirectTo:'/'});
