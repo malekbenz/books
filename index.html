@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
+<title>Brahim</title>
 	
     <link href='//fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
     
@@ -23,6 +23,8 @@
 	
     <script	src="js/bootstrap.min.js" type="text/javascript" ></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
     <script src="app/app.js"></script>
     
     <script	src="js/jquery.smint.js" type="text/javascript" ></script>
@@ -165,57 +167,8 @@ $(document).ready(function(){
                 </div>
                 
                 <!--<a href="#sTop" class="click-down"><i class="fa fa-chevron-circle-down"></i></a>-->
-           
-            <div class="container" ng-controller ="main as vm">
 
-                <div class="row">
-                    
-                    <div class="hidden-xs hidden-sm col-md-2" >
-                            <ul class=" nav nav-pills nav-stacked ">
-                                <li class="active"><a href="#sTop"><i class="fa fa-cog"></i>About</a></li>
-                                <li><a href="#s1"><i class="fa fa-users"></i>Team</a></li>
-                                <li><a href="#s2"><i class="fa fa-cogs"></i>Services</a></li>
-                                <li><a href="#s3"><i class="fa fa-picture-o"></i>Portfolio</a></li>
-                                <li><a href="#s6"><i class="fa fa-pencil-square-o"></i>Blog</a></li>
-                                <li><a href="#s7"><i class="fa fa-comment"></i>Contact</a></li>
-                            </ul>
-  
-                    </div>  
-
-                    <div  class="col-md-7  container-fluid">
-                        <div class="row" >
-                            <div class="col-xs-6 col-sm-4" ng-repeat="item in vm.articles">
-                                <a href="#" class="thumbnail">
-                                <img ng-src="img/Pizza{{item}}.jpg" class="img-fluid" alt="...">
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="hidden-xs hidden-sm col-md-3">
-                        <div class="panel-group" id="accordion">
-                                  <div class="panel panel-default" ng-repeat="item in vm.tables">
-                                    <div class="panel-heading">
-                                      <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href=".collapse{{item}}">
-                                          TABLE N° - {{item}}
-                                        </a>
-                                      </h4>
-                                    </div>
-                                    <div id="" class="collapse{{item}} panel-collapse collapse" ng-class ="{'in':item==1}" >
-                                      <div class="panel-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                </div>
-
-                    </div>    
-                </div>
-
-            
-            </div>
+                <ng-view></ng-view>
 
             
         </div><!-- /top-container -->
