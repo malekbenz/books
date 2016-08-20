@@ -20,24 +20,9 @@
     </form>
 </div>
 
-<!--<div class="container">
-	<div class="row">
-        <form ng-submit="vm.search()">
-	    	<h2>Search for a book </h2>
-                       <div id="custom-search-input">
-                            <div class="input-group col-md-12">
-                                <input type="text"  autofocus   ng-model="vm.searchTerm"  class=" search-query form-control" placeholder="Search" />
-                                <span class="input-group-btn">
-                                    <button class="btn btn-danger" type="button">
-                                        <span class=" glyphicon glyphicon-search"></span>
-                                    </button>
-                                </span>
-                            </div>
-                        </div>
-        </form>
-	</div>
-</div>-->
 <hr>
+
+
 <div class="row">
     <div class="hidden-xs hidden-sm col-md-2" >
                             <ul class=" nav nav-pills nav-stacked ">
@@ -50,27 +35,9 @@
                             </ul>
   
     </div>
-
     <div  class="col-md-7  container-fluid">
-                        <div class="row" >
-                            <div class="col-xs-6 col-sm-4" ng-repeat="item in vm.books">
-                                <a href="/#/book/{{item.ID}}" class="thumbnail">
-                                <img ng-src="{{item.Image}}" class="img-fluid" alt="...">
-                                </a>
-                            </div>
-
-                        </div>
-
-                        <nav aria-label="Page navigation">
-                            <ul class="pagination">
-                                
-                                <li ng-class="{active : page== vm.pages.current}" ng-repeat = "page in vm.pages.activePages"  >
-                                    <a ng-href="/#/{{vm.searchTerm}}/{{page}} ">
-                                    <span class="sr-only">{{page}}</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>            
+        
+        <component.books books ="vm.books" pages = "vm.pages" term ="vm.searchTerm" ></component.books>
 
     </div>
 
