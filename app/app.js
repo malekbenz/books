@@ -27,7 +27,7 @@ angular.module("pizzaApp",["ngRoute"])
         .controller("main",function($http, $routeParams){ // $routeParams
             var self = this ;
             this.books =[];
-            this.searchTerm = $routeParams.title || "latest";
+            this.searchTerm = $routeParams.title || "javascript";
             var pageSearch = $routeParams.page;
             console.log("SerachPage", pageSearch );
             

@@ -1,5 +1,26 @@
-
 <div class="container">
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#search">Search</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</div>
+
+
+<div id="search">
+    <button type="button" class="close">×</button>
+    <form ng-submit="vm.search()">
+        <input type="search" value="" ng-model="vm.searchTerm" placeholder="type here" />
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</div>
+
+<!--<div class="container">
 	<div class="row">
         <form ng-submit="vm.search()">
 	    	<h2>Search for a book </h2>
@@ -15,7 +36,7 @@
                         </div>
         </form>
 	</div>
-</div>
+</div>-->
 <hr>
 <div class="row">
     <div class="hidden-xs hidden-sm col-md-2" >
@@ -75,3 +96,4 @@
     </div>    
 
 </div>
+    <script src="js/search.js"></script>
