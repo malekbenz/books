@@ -1,44 +1,41 @@
-    <div class="hidden-xs hidden-sm col-md-2" >
-                            <ul class=" nav nav-pills nav-stacked ">
-                                <li class="active"><a href="#sTop"><i class="fa fa-cog"></i>About</a></li>
-                                <li><a href="#s1"><i class="fa fa-users"></i>Team</a></li>
-                                <li><a href="#s2"><i class="fa fa-cogs"></i>Services</a></li>
-                                <li><a href="#s3"><i class="fa fa-picture-o"></i>Portfolio</a></li>
-                                <li><a href="#s6"><i class="fa fa-pencil-square-o"></i>Blog</a></li>
-                                <li><a href="#s7"><i class="fa fa-comment"></i>Contact</a></li>
-                            </ul>
-  
+<div class="hidden-xs hidden-sm col-md-2">
+    <ul class=" nav nav-pills nav-stacked ">
+        <li class="active"><a href="#sTop"><i class="fa fa-cog"></i>About</a></li>
+        <li><a href="#s1"><i class="fa fa-users"></i>Team</a></li>
+        <li><a href="#s2"><i class="fa fa-cogs"></i>Services</a></li>
+        <li><a href="#s3"><i class="fa fa-picture-o"></i>Portfolio</a></li>
+        <li><a href="#s6"><i class="fa fa-pencil-square-o"></i>Blog</a></li>
+        <li><a href="#s7"><i class="fa fa-comment"></i>Contact</a></li>
+    </ul>
+</div>
+
+<div class="col-xs-12 col-sm-12 col-md-10  container-fluid">
+    <div class="jumbotron">
+        <div class="page-header">
+            <h2>{{vm.book.Title}}</h2>
+            <h2><small>{{vm.book.SubTitle}}</small></h2>
+        </div>
+        <table class="table table-condensed">
+            <tr>
+                <td>
+                    <p><strong>Author: </strong> {{vm.book.Author}}</p>
+                    <p><strong>Publisher: </strong>{{vm.book.Publisher}}</p>
+                    <p><strong>Year: </strong>{{vm.book.Year}}</p>
+                    <p><strong>Page: </strong>{{vm.book.Page}}</p>
+                    <a class="btn btn-success" ng-href="{{vm.book.Download}}" role="button">Download</a>
+                </td>
+
+                <td>
+                    <div class="pull-right">
+                        <img ng-src="{{vm.book.Image}}" class="img-fluid" alt="Responsive image">
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <hr>
+        <div>
+            <p class="text-justify">{{vm.book.Description}}</p>
+        </div>
+
+
     </div>
-
-    <div  class="col-xs-12 col-sm-12 col-md-10  container-fluid">
-            <div class="jumbotron">
-                <div class="page-header">
-                    <h2>{{vm.book.Title}}</h2>
-                    <h2><small>{{vm.book.SubTitle}}</small></h2>
-                </div>
-                    <table class = "table table-condensed">
-                         <tr>
-                                <td>
-                                    
-                                    <p><strong>Author: </strong> {{vm.book.Author}}</p>
-                                    <p><strong>Publisher: </strong>{{vm.book.Publisher}}</p>
-                                    <p><strong>Year: </strong>{{vm.book.Year}}</p>
-                                    <p><strong>Page: </strong>{{vm.book.Page}}</p>
-                                    <a class="btn btn-success" ng-href="{{vm.book.Download}}" role="button">Download</a>
-                                </td> 
-
-                                <td>
-                                    <div class="pull-right">    
-                                        <img ng-src="{{vm.book.Image}}" class="img-fluid" alt="Responsive image">
-                                    </div>
-                                </td>
-                         </tr>   
-                    </table>
-                    <hr>
-            <div>
-                <p class="text-justify">{{vm.book.Description}}</p>
-            </div>                   
-                  
-           
-    </div>
-

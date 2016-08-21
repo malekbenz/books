@@ -1,18 +1,26 @@
-<div class="row" >
-<div class="col-xs-6 col-sm-4" ng-repeat="item in $ctrl.books">
+<div class="row">
+    <div class="col-xs-6 col-sm-4" ng-repeat="item in $ctrl.books">
         <a href="/#/book/{{item.ID}}" class="thumbnail">
-        <img ng-src="{{item.Image}}" class="img-fluid" alt="...">
+            <img ng-src="{{item.Image}}" class="img-fluid" alt="...">
         </a>
     </div>
 </div>
-        
+
 <nav aria-label="Page navigation">
     <ul class="pagination">
-        <li ng-class="{active : page== $ctrl.pages.current}" ng-repeat = "page in $ctrl.pages.activePages"  >
+        <li ng-class="{active : page== $ctrl.pages.current}" ng-repeat="page in $ctrl.pages.activePages">
             <a ng-href="/#/{{$ctrl.term}}/{{page}} ">
-            <span class="sr-only">{{page}}</span>
+                <span class="sr-only">{{page}}</span>
             </a>
         </li>
+        <li >
+            <a aria-label="Next" ng-href="/#/">
+                <span class="sr-only">{{page}}</span>
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+            </a>
+
+        </li>
     </ul>
-</nav>            
+</nav>
 </div>

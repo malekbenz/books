@@ -2,15 +2,15 @@
     <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#search">Search</a></li>
                 </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
     </nav>
 </div>
-
 
 <div id="search">
     <button type="button" class="close">×</button>
@@ -22,45 +22,40 @@
 
 <hr>
 
-
 <div class="row">
-    <div class="hidden-xs hidden-sm col-md-2" >
-                            <ul class=" nav nav-pills nav-stacked ">
-                                <li class="active"><a href="#sTop"><i class="fa fa-cog"></i>About</a></li>
-                                <li><a href="#s1"><i class="fa fa-users"></i>Team</a></li>
-                                <li><a href="#s2"><i class="fa fa-cogs"></i>Services</a></li>
-                                <li><a href="#s3"><i class="fa fa-picture-o"></i>Portfolio</a></li>
-                                <li><a href="#s6"><i class="fa fa-pencil-square-o"></i>Blog</a></li>
-                                <li><a href="#s7"><i class="fa fa-comment"></i>Contact</a></li>
-                            </ul>
-  
-    </div>
-    <div  class="col-md-7  container-fluid">
-        
-        <component.books books ="vm.books" pages = "vm.pages" term ="vm.searchTerm" ></component.books>
+    <div class="hidden-xs hidden-sm col-md-2">
+        <ul class=" nav nav-pills nav-stacked ">
+            <li class="active"><a href="#sTop"><i class="fa fa-cog"></i>About</a></li>
+            <li><a href="#s1"><i class="fa fa-users"></i>Team</a></li>
+            <li><a href="#s2"><i class="fa fa-cogs"></i>Services</a></li>
+            <li><a href="#s3"><i class="fa fa-picture-o"></i>Portfolio</a></li>
+            <li><a href="#s6"><i class="fa fa-pencil-square-o"></i>Blog</a></li>
+            <li><a href="#s7"><i class="fa fa-comment"></i>Contact</a></li>
+        </ul>
 
+    </div>
+    <div class="col-md-7  container-fluid">
+        <component.books books="vm.books" pages="vm.pages" term="vm.searchTerm"></component.books>
     </div>
 
     <div class="hidden-xs hidden-sm col-md-3">
-                        <div class="panel-group" id="accordion">
-                                  <div class="panel panel-default" ng-repeat="item in vm.tables">
-                                    <div class="panel-heading">
-                                      <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href=".collapse{{item}}">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default" ng-repeat="item in vm.tables">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href=".collapse{{item}}">
                                           TABLE N° - {{item}}
-                                        </a>
-                                      </h4>
-                                    </div>
-                                    <div id="" class="collapse{{item}} panel-collapse collapse" ng-class ="{'in':item==1}" >
-                                      <div class="panel-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                </div>
-
-    </div>    
-
+                        </a>
+                    </h4>
+                </div>
+                <div id="" class="collapse{{item}} panel-collapse collapse" ng-class="{'in':item==1}">
+                    <div class="panel-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                        non cupidatat skateboard dolor brunch.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-    <script src="js/search.js"></script>
+<script src="js/search.js"></script>
