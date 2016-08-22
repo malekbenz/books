@@ -12,7 +12,6 @@
                 templateUrl: "views/book.html",
                 controller: "controller.book",
                 controllerAs: "vm"
-
             })
             .when("/:title/:page", {
                 templateUrl: "views/main.html",
@@ -29,4 +28,4 @@
             .otherwise({ redirectTo: '/' });
         //  $locationProvider.html5Mode(true);
     }
-} ())
+} ());

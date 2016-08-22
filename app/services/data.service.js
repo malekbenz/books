@@ -1,7 +1,5 @@
 // dataservice factory
 (function () {
-
-
     angular
         .module('app')
         .factory('dataservice', dataservice);
@@ -25,8 +23,6 @@
             return $http.get(myUrl)
                 .then(getBooksComplete)
                 .catch(getBooksFailed);
-
-
         }
 
         function getBooks(title) {
