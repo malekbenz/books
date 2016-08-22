@@ -2,7 +2,7 @@
     "use strict";
 
     angular.module("pizzaApp")
-        .controller("controller", controller);
+        .controller("controller.main", controller);
 
     controller.$inject = ["$http", "$routeParams"];    
 
