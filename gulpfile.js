@@ -3,6 +3,8 @@ var concat = require("gulp-concat");
 var uglify = require('gulp-uglify');
 var imagemin = require('gulp-imagemin');
 var del = require('del');
+var minifyCss = require("gulp-minify-css");
+
 
 var paths = {
     scripts: {
@@ -26,7 +28,11 @@ gulp.task("scripts", function () {
         .pipe(gulp.dest(paths.scripts.dest));
 });
 
-
+gulp.task('minify-css', function () {
+	gulp.src(paths.css.src) // path to your file
+	.pipe(minifyCss())
+	.pipe(gulp.dest(paths.css.dest));
+});
 // Not all tasks need to use streams
 // A gulpfile is just another node program and you can use any package available on npm
 gulp.task('clean', function () {
