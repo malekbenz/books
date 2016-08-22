@@ -6,10 +6,10 @@ var del = require('del');
 
 var paths = {
     scripts: {
-        srcWatch: ['./app/**/*.js'],
+        srcWatch: ['./app/**/*.js','./js/*.js'],
   
         src: ["./app/app.js", "./app/settings/*.js", "./app/services/*.js"
-            , "./app/components/*.js", "./app/controllers/*.js"],
+            , "./app/components/*.js", "./app/controllers/*.js", "./js/*.js" ],
         dest: "./dist/js/"
     },
     css: {

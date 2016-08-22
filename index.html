@@ -1,40 +1,43 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Brahim</title>
-	
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Brahim</title>
+
     <link href='//fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-    
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    
+
     <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
-    
+
     <!-- Optional theme -->
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
     <!--<link rel="stylesheet" href="css/bootstrap-theme.min.css">-->
-    
+
     <!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    
+
     <link rel="stylesheet/less" type="text/css" href="style.less" />
-    
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	
+
     <!--<script	src="js/bootstrap.min.js" type="text/javascript" ></script>-->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
-    
+
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.min.js"></script>
-    
-    
+
+    <script src="lib/jquery.easing.min.js" type="text/javascript"></script>
+
 
 
     <script src="dist/js/app.min.js"></script>
+
     <!--<script src="app/app.js"></script>
     <script src="app/settings/route.config.js"></script>-->
     <!--<script src="app/services/data.service.js"></script>
@@ -45,19 +48,14 @@
     <script src="app/controllers/controller.main.js"></script>
     <script src="app/controllers/controller.book.js"></script>-->
 
-    
-    <script src="lib/jquery.easing.min.js" type="text/javascript" ></script>
-    <script	src="js/jquery.smint.js" type="text/javascript"   ></script>
-	<script src="js/jquery.easy-ticker.js" type="text/javascript" ></script>
-    
+
+    <script src="js/jquery.smint.js" type="text/javascript"></script>
+    <script src="js/jquery.easy-ticker.js" type="text/javascript"></script>
+
     <script src="less.js" type="text/javascript"></script>
-    
     <script src="js/isotop.js"></script>
-
-	<script src="js/jquery.colorbox.js"></script>
-
-<script type="text/javascript">
-
+    <script src="js/jquery.colorbox.js"></script>
+    <script type="text/javascript">
 
 	$('.collapse').collapse();
 	
@@ -151,54 +149,56 @@ $(document).ready(function(){
 
 <body ng-app="app">
 
-<div class="subMenu" >
-    	<div class="container">
-        	<div class="row">
-                
-            	<div class="col-md-2 th-logo">
+    <div class="subMenu">
+        <div class="container">
+            <div class="row">
 
-                	<a href="/#/">
-                    	<img src="img/logo.png" alt="logo" />
+                <div class="col-md-2 th-logo">
+
+                    <a href="/#/">
+                        <img src="img/logo.png" alt="logo" />
                     </a>
                 </div>
 
                 <div class="col-md-10">
                     <div class="inner pull-right">
-                            <a href="#about" class="subNavBtn">About Us</a> 
-                            <a href="#s5" class="subNavBtn">Prix</a>
-                            <a href="#s6" class="subNavBtn">Blog</a>
-                            <a href="#s7" class="subNavBtn">Contact</a>
+                        <a href="#about" class="subNavBtn">About Us</a>
+                        <a href="#s5" class="subNavBtn">Prix</a>
+                        <a href="#s6" class="subNavBtn">Blog</a>
+                        <a href="#s7" class="subNavBtn">Contact</a>
                     </div>
                 </div>
-            </div><!--   row -->
+            </div>
+            <!--   row -->
         </div>
-</div>
+    </div>
 
- 
-<div class="wrap ">
-	<div class="section sTop">
-		<div class="top-container">
 
-            <div class="container"> 
-                <!--<div class="large-logo">
+    <div class="wrap ">
+        <div class="section sTop">
+            <div class="top-container">
+
+                <div class="container">
+                    <!--<div class="large-logo">
                     <a href="#"><img src="img/logo-large.png" alt="logo" /></a>
                 </div>-->
-                <div class="vticker">
-                    <ul>
-                        <li> </li>
-                        <!--<li>GESTION DE CAISSE</li>-->
-                    </ul>
+                    <div class="vticker">
+                        <ul>
+                            <li> </li>
+                            <!--<li>GESTION DE CAISSE</li>-->
+                        </ul>
+                    </div>
+
+                    <!--<a href="#sTop" class="click-down"><i class="fa fa-chevron-circle-down"></i></a>-->
+
+                    <ng-view></ng-view>
+
                 </div>
-                
-                <!--<a href="#sTop" class="click-down"><i class="fa fa-chevron-circle-down"></i></a>-->
+                <!-- /top-container -->
 
-                <ng-view></ng-view>
-            
-        </div><!-- /top-container -->
-        
-	</div>
+            </div>
 
-	<!--<div class="subMenu" >
+            <!--<div class="subMenu" >
     	<div class="container">
         	<div class="row">
             	<div class="col-md-2 th-logo">
@@ -222,285 +222,315 @@ $(document).ready(function(){
         </div>
 	</div>-->
 
-	<div class="section about">
-        
-        <div class="about-f">
-        	
-            <div class="container">
-        	
-                <div class="row">
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                        <div class="about-us-f">
-                            <h3>About Us</h3>
-                            <p>We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you.</p>
-                            <p>We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place.</p>
-                        </div>
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    	<div class="about-us-f">
-                        		<h3>Our Goals</h3>
-                                
-                                <div class="panel-group" id="accordion">
-                                  <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                      <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href=".collapseOne">
+            <div class="section about">
+
+                <div class="about-f">
+
+                    <div class="container">
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <div class="about-us-f">
+                                    <h3>About Us</h3>
+                                    <p>We are team of creative photographers. We passionate with photography and other creative
+                                        things. If you are looking professional photography theme with endless possibilities,
+                                        you come in right place. This template consist of well-organized layers. Tons of
+                                        features waiting for you.</p>
+                                    <p>We are team of creative photographers. We passionate with photography and other creative
+                                        things. If you are looking professional photography theme with endless possibilities,
+                                        you come in right place.</p>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <div class="about-us-f">
+                                    <h3>Our Goals</h3>
+
+                                    <div class="panel-group" id="accordion">
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href=".collapseOne">
                                           IMPRESSIVE TEMPLATE
                                         </a>
-                                      </h4>
-                                    </div>
-                                    <div id="" class="collapseOne panel-collapse collapse in">
-                                      <div class="panel-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                      <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href=".collapseTwo">
+                                                </h4>
+                                            </div>
+                                            <div id="" class="collapseOne panel-collapse collapse in">
+                                                <div class="panel-body">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                                    non cupidatat skateboard dolor brunch.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href=".collapseTwo">
                                           TONS OF FEATURES
                                         </a>
-                                      </h4>
-                                    </div>
-                                    <div id="" class="collapseTwo panel-collapse collapse">
-                                      <div class="panel-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                      <h4 class="panel-title">
-                                        <a data-toggle="collapse" data-parent="#accordion" href=".collapseThree">
+                                                </h4>
+                                            </div>
+                                            <div id="" class="collapseTwo panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                                    non cupidatat skateboard dolor brunch.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default">
+                                            <div class="panel-heading">
+                                                <h4 class="panel-title">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href=".collapseThree">
                                           CREATIVE LAYOUT
                                         </a>
-                                      </h4>
+                                                </h4>
+                                            </div>
+                                            <div id="" class="collapseThree panel-collapse collapse">
+                                                <div class="panel-body">
+                                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                                                    non cupidatat skateboard dolor brunch.
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div id="" class="collapseThree panel-collapse collapse">
-                                      <div class="panel-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch.
-                                      </div>
+
+                                </div>
+                                <!-- /.about-us-f -->
+                            </div>
+                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                <div class="about-us-f">
+                                    <h3>Our Goals</h3>
+
+                                    <span class="sr-only">HTML <span class="pull-right">40%</span></span>
+                                    <div class="progress top100">
+                                        <div class="progress-bar progress-bar-pink" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                        </div>
                                     </div>
-                                  </div>
-                                </div>
-                            
-                        </div><!-- /.about-us-f -->
-                    </div>
-                    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                    	<div class="about-us-f">
-                        		<h3>Our Goals</h3>
-                        
-                        		<span class="sr-only">HTML <span class="pull-right">40%</span></span>
-                        		<div class="progress top100">
-                                  <div class="progress-bar progress-bar-pink" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                  </div>
-                                </div>
-                                
-                                <span class="sr-only">Graphic <span class="pull-right">20%</span></span>
-                                <div class="progress">
-                                  <div class="progress-bar progress-bar-pink" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                  </div>
-                                </div>
-                                <span class="sr-only">JS <span class="pull-right">60%</span></span>
-                                <div class="progress">
-                                  <div class="progress-bar progress-bar-pink" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                  </div>
-                                </div>
-                        </div>
-                    </div>
-                </div>
-            
-            </div><!-- /container -->
-            
-        </div><!-- /about-f -->
-        
-	</div>
 
-	<div class="section s3">
-		<div class="inner">
-				<div class="container">
-                
-                	<div class="services">
-                    	
-                        <div class="services-tops">
-                        	
-                            <h2>Nos Services</h2>
-                            
-                            <p> Description de nos services </p>
-                        	
-                        </div><!-- /services-tops -->
-                        
-                        <div class="row">
-                        	
-                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                            	<div class="services-box">
-                                	<i class="fa fa-cog"></i>
-                                    <h6>Photography</h6>
-                                    
-                                    <p>We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you. </p>
-                                    
-                                </div><!-- /services-box -->
+                                    <span class="sr-only">Graphic <span class="pull-right">20%</span></span>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-pink" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                        </div>
+                                    </div>
+                                    <span class="sr-only">JS <span class="pull-right">60%</span></span>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-pink" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            
-                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                            	<div class="services-box">
-                                	<i class="fa fa-coffee"></i>
-                                    <h6>Creative Ideas</h6>
-                                    
-                                    <p>We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you. </p>
-                                    
-                                </div><!-- /services-box -->
-                            </div>
-                            
-                            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                            	<div class="services-box">
-                                	<i class="fa fa-comment-o"></i>
-                                    <h6>Consulting</h6>
-                                    
-                                    <p>We are team of creative photographers. We passionate with photography and other creative things. If you are looking professional photography theme with endless possibilities, you come in right place. This template consist of well-organized layers. Tons of features waiting for you. </p>
-                                </div><!-- /services-box -->
-                            </div>
-                        
                         </div>
-                        
-                    </div><!-- /services -->
-                
-                </div>
-		</div>
-	</div>
 
-    <div class="transparent-bg">
-    	<div class="bcg">
-        	<div class="bcg-bg">
-            	<h1>"You only live once, but if you do it right, once is enough."</h1>
-                <h6>Mae West</h6>
+                    </div>
+                    <!-- /container -->
+
+                </div>
+                <!-- /about-f -->
+
             </div>
-        </div>
-    </div><!-- /transparent-bg -->
 
-	<div class="section s5" id="s5">
-		<div class="inner">
-			<div class="pricing">
-            	<div class="container">
-                    <div class="pricing-header">
-                        <h2>Nos Prix</h2>
-                        <p>Desciption .</p>
+            <div class="section s3">
+                <div class="inner">
+                    <div class="container">
+
+                        <div class="services">
+
+                            <div class="services-tops">
+
+                                <h2>Nos Services</h2>
+
+                                <p> Description de nos services </p>
+
+                            </div>
+                            <!-- /services-tops -->
+
+                            <div class="row">
+
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="services-box">
+                                        <i class="fa fa-cog"></i>
+                                        <h6>Photography</h6>
+
+                                        <p>We are team of creative photographers. We passionate with photography and other creative
+                                            things. If you are looking professional photography theme with endless possibilities,
+                                            you come in right place. This template consist of well-organized layers. Tons
+                                            of features waiting for you. </p>
+
+                                    </div>
+                                    <!-- /services-box -->
+                                </div>
+
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="services-box">
+                                        <i class="fa fa-coffee"></i>
+                                        <h6>Creative Ideas</h6>
+
+                                        <p>We are team of creative photographers. We passionate with photography and other creative
+                                            things. If you are looking professional photography theme with endless possibilities,
+                                            you come in right place. This template consist of well-organized layers. Tons
+                                            of features waiting for you. </p>
+
+                                    </div>
+                                    <!-- /services-box -->
+                                </div>
+
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="services-box">
+                                        <i class="fa fa-comment-o"></i>
+                                        <h6>Consulting</h6>
+
+                                        <p>We are team of creative photographers. We passionate with photography and other creative
+                                            things. If you are looking professional photography theme with endless possibilities,
+                                            you come in right place. This template consist of well-organized layers. Tons
+                                            of features waiting for you. </p>
+                                    </div>
+                                    <!-- /services-box -->
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <!-- /services -->
+
                     </div>
-                    
-                    <div class="row">
-                    	<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                        	<div class="pricing-box">
-                            	<div class="pricing-head">
-                                	<h1 class="price">500 DA</h1>
-                                    <h4>Royal</h4>
-                                </div>
-                                <div class="pricing-row">
-                                	Creative Idea
-                                </div>
-                                <div class="pricing-row">
-                                	<strong>24/7</strong>TECH SUPPORT
-                                </div>
-                                <div class="pricing-row">
-                                	<strong>5</strong>PROJECTS
-                                </div>
-                                <div class="pricing-row">
-                                	<strong>1GB</strong>STORAGE
-                                </div>
-                                <div class="pricing-row">
-                                	UNLIMITED USERS
-                                </div>
-                                <div class="pricing-row last">
-                                	<a href="#" class="submit">Buy It Now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                        	<div class="pricing-box">
-                            	<div class="pricing-head business">
-                                	<h1 class="price">200 DA</h1>
-                                    <h4>Standard</h4>
-                                </div>
-                                <div class="pricing-row">
-                                	Creative Idea
-                                </div>
-                                <div class="pricing-row">
-                                	<strong>24/7</strong>TECH SUPPORT
-                                </div>
-                                <div class="pricing-row">
-                                	<strong>5</strong>PROJECTS
-                                </div>
-                                <div class="pricing-row">
-                                	<strong>1GB</strong>STORAGE
-                                </div>
-                                <div class="pricing-row">
-                                	UNLIMITED USERS
-                                </div>
-                                <div class="pricing-row last">
-                                	<a href="#" class="submit">Buy It Now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-                        	<div class="pricing-box">
-                            	<div class="pricing-head">
-                                	<h1 class="price">300 DA</h1>
-                                    <h4>Simple</h4>
-                                </div>
-                                <div class="pricing-row">
-                                	Creative Idea
-                                </div>
-                                <div class="pricing-row">
-                                	<strong>24/7</strong>TECH SUPPORT
-                                </div>
-                                <div class="pricing-row">
-                                	<strong>5</strong>PROJECTS
-                                </div>
-                                <div class="pricing-row">
-                                	<strong>1GB</strong>STORAGE
-                                </div>
-                                <div class="pricing-row">
-                                	UNLIMITED USERS
-                                </div>
-                                <div class="pricing-row last">
-                                	<a href="#" class="submit">Buy It Now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
                 </div>
-            </div><!--  /pricing  -->
-		</div>
-	</div>
-    
-    <div class="section s6">
-		<div class="inner">
-        	<div class="blog">
+            </div>
 
-            </div><!-- /blog -->
-        </div>
-    </div>
-    
-    <div class="section s7">
-		<div class="inner">
-        
             <div class="transparent-bg">
                 <div class="bcg">
-                    <div class="bcg-bg bcg-bg-blk">
-                    
-                    <div class="container">
-                                <div class="contact">
-                                    <h1>About us</h1>
-                        </div>
+                    <div class="bcg-bg">
+                        <h1>"You only live once, but if you do it right, once is enough."</h1>
+                        <h6>Mae West</h6>
                     </div>
                 </div>
-            </div><!-- /transparent-bg -->
-    	</div>
-    </div>
-	
-</div>
-    
+            </div>
+            <!-- /transparent-bg -->
+
+            <div class="section s5" id="s5">
+                <div class="inner">
+                    <div class="pricing">
+                        <div class="container">
+                            <div class="pricing-header">
+                                <h2>Nos Prix</h2>
+                                <p>Desciption .</p>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="pricing-box">
+                                        <div class="pricing-head">
+                                            <h1 class="price">500 DA</h1>
+                                            <h4>Royal</h4>
+                                        </div>
+                                        <div class="pricing-row">
+                                            Creative Idea
+                                        </div>
+                                        <div class="pricing-row">
+                                            <strong>24/7</strong>TECH SUPPORT
+                                        </div>
+                                        <div class="pricing-row">
+                                            <strong>5</strong>PROJECTS
+                                        </div>
+                                        <div class="pricing-row">
+                                            <strong>1GB</strong>STORAGE
+                                        </div>
+                                        <div class="pricing-row">
+                                            UNLIMITED USERS
+                                        </div>
+                                        <div class="pricing-row last">
+                                            <a href="#" class="submit">Buy It Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="pricing-box">
+                                        <div class="pricing-head business">
+                                            <h1 class="price">200 DA</h1>
+                                            <h4>Standard</h4>
+                                        </div>
+                                        <div class="pricing-row">
+                                            Creative Idea
+                                        </div>
+                                        <div class="pricing-row">
+                                            <strong>24/7</strong>TECH SUPPORT
+                                        </div>
+                                        <div class="pricing-row">
+                                            <strong>5</strong>PROJECTS
+                                        </div>
+                                        <div class="pricing-row">
+                                            <strong>1GB</strong>STORAGE
+                                        </div>
+                                        <div class="pricing-row">
+                                            UNLIMITED USERS
+                                        </div>
+                                        <div class="pricing-row last">
+                                            <a href="#" class="submit">Buy It Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                                    <div class="pricing-box">
+                                        <div class="pricing-head">
+                                            <h1 class="price">300 DA</h1>
+                                            <h4>Simple</h4>
+                                        </div>
+                                        <div class="pricing-row">
+                                            Creative Idea
+                                        </div>
+                                        <div class="pricing-row">
+                                            <strong>24/7</strong>TECH SUPPORT
+                                        </div>
+                                        <div class="pricing-row">
+                                            <strong>5</strong>PROJECTS
+                                        </div>
+                                        <div class="pricing-row">
+                                            <strong>1GB</strong>STORAGE
+                                        </div>
+                                        <div class="pricing-row">
+                                            UNLIMITED USERS
+                                        </div>
+                                        <div class="pricing-row last">
+                                            <a href="#" class="submit">Buy It Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--  /pricing  -->
+                </div>
+            </div>
+
+            <div class="section s6">
+                <div class="inner">
+                    <div class="blog">
+
+                    </div>
+                    <!-- /blog -->
+                </div>
+            </div>
+
+            <div class="section s7">
+                <div class="inner">
+
+                    <div class="transparent-bg">
+                        <div class="bcg">
+                            <div class="bcg-bg bcg-bg-blk">
+
+                                <div class="container">
+                                    <div class="contact">
+                                        <h1>About us</h1>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /transparent-bg -->
+                    </div>
+                </div>
+
+            </div>
+
 
 </body>
+
 </html>
