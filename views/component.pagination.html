@@ -1,11 +1,11 @@
 <nav aria-label="Page navigation">
     <ul class="pagination">
         <li  ng-class="{active : page == vm.current }" ng-repeat="page in vm.getpages(vm.current, vm.total)">
-            <a  ng-show = "$first && (page > 1)" aria-label="Prior" ng-href="/#/{{vm.term}}/{{page-1}} " >
+            <a   ng-show = "$first && (page > 1)" aria-label="Prior" ng-href="/#/{{vm.term}}/{{page}} " >
                 <span aria-hidden="true">&laquo;</span>
                 <span class="sr-only">Prior</span>
             </a>
-            <a g-hide = "($last && (vm.total > page)) "  ng-href="/#/{{vm.term}}/{{page}} ">
+            <a ng-hide = "($last && (vm.total > page)) || ($first && (page > 1))"  ng-href="/#/{{vm.term}}/{{page}} ">
                 <span class="sr-only">{{page}}</span>
             </a>
             <a ng-show = "$last && (vm.total > page)" aria-label="Next" ng-href="/#/{{vm.term}}/{{page}} " >
