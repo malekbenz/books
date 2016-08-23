@@ -5,67 +5,50 @@
 
         .controller("controller.main", controller);
 
-    controller.$inject = ["$http", "dataservice", "$routeParams",];
+    controller.$inject = ["dataservice", "$routeParams"];
 
-    function controller($http, dataservice, $routeParams) {
+    function controller(dataservice, $routeParams) {
         var self = this;
-
-        self.books = [];
-        self.searchTerm = $routeParams.title || "javascript";
-        var pageSearch = $routeParams.page;
-
-        self.pages = {
-            total: 0,
-            current: ($routeParams.page || 1),
-            activePages: []
-        };
-
-        var title = self.searchTerm;
-
-        var url = "http://it-ebooks-api.info/v1/search/" + title;
-
-        if (pageSearch) {
-            url = url + "/page/" + pageSearch;
-        }
-
-        self.search = function () {
-            var url = "http://it-ebooks-api.info/v1/search/" + self.searchTerm;
-            dataservice.getBooks(self.searchTerm)
-                .then(function success(response) {
-
-                    console.log("response ", response );
-                    self.books = response.Books;
-                    self.pages.total = Math.floor(response.Total / 10) + 1;
-                    self.pages.current = response.Page;
-                    self.pages.time = response.Time;
-
-                });
-
-            // $http.get(url).then(
-            //     function success(response) {
-            //         self.books = response.data.Books;
-            //         self.pages.total = Math.floor(response.data.Total / 10) + 1;
-            //         self.pages.current = response.data.Page;
-            //         self.pages.time = response.data.Time;
-
-            //     },
-            //     function error(err) {
-            //         console.log(err);
-            //     }
-            // );
-
-        };
         
-        $http.get(url).then(
-            function success(response) {
-                self.books = response.data.Books;
-                self.pages.total = Math.floor(response.data.Total / 10) + 1;
 
-            },
-            function error(err) {
-                console.log(err);
-            }
-        );
+        self.pages = {};
+        self.search = searchBook;
+        init();
+
+        function searchBook() {
+            
+            dataservice
+                .getBooks(self.pages.query, self.pages.page )
+                .then(success, error);
+
+        };
+
+        function init() {
+
+            self.books = [];
+            self.pages.total = 0;
+            self.pages.current = $routeParams.page || 1;
+            self.pages.activePages = [];
+            self.pages.query = $routeParams.query || "javascript";
+
+            dataservice
+                .getBooks(self.pages.query, self.pages.current)
+                .then(success, error);
+        };
+
+        function success(response) {
+
+            self.books = response.Books;
+            self.pages.total = Math.floor(response.Total / 10) + 1;
+            self.pages.current = response.Page;
+
+            self.pages.time = response.Time || 0;
+
+        };
+
+        function error(err) {
+            console.log(err);
+        };
 
         self.tables = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
 

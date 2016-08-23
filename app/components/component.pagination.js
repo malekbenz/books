@@ -10,7 +10,7 @@
             bindings: {
                 total: "<",
                 current: "<",
-                term: "<"
+                query: "<"
             }
 
         });

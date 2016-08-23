@@ -15,7 +15,7 @@
 <div id="search">
     <button type="button" class="close">×</button>
     <form ng-submit="vm.search()">
-        <input type="search" value="" ng-model="vm.searchTerm" placeholder="type here" />
+        <input type="search" value="" ng-model="vm.pages.query" placeholder="type here" />
         <button type="submit" class="btn btn-primary">Search</button>
     </form>
 </div>
@@ -35,7 +35,7 @@
 
     </div>
     <div class="col-md-7  container-fluid">
-        <component.books books="vm.books" pages="vm.pages" term="vm.searchTerm"></component.books>
+        <component.books books="vm.books" pages="vm.pages" ></component.books>
     </div>
 
     <div class="hidden-xs hidden-sm col-md-3">

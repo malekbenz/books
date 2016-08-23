@@ -15,6 +15,7 @@ var paths = {
         dest: "./dist/js/"
     },
     css: {
+        srcWatch: ["./style.css"],
         src: ["./style.css"],
         dest: "./dist/css/"
     },
@@ -50,9 +51,10 @@ gulp.task('images', ['clean'], function () {
 // Rerun the task when a file changes
 gulp.task('watch', function () {
     gulp.watch(paths.scripts.srcWatch, ['scripts']);
+    gulp.watch(paths.css.srcWatch, ['minify-css']);
     // gulp.watch(paths.images, ['images']);
 });
 
 // The default task (called when you run `gulp` from cli)
 // 'watch', 'images'
-gulp.task('default', ['watch', 'scripts']);
+gulp.task('default', ['watch', 'scripts', 'minify-css']);

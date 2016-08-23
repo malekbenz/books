@@ -13,7 +13,14 @@
                 controller: "controller.book",
                 controllerAs: "vm"
             })
-            .when("/:title/:page", {
+
+            .when("/:query/:page", {
+                templateUrl: "views/main.html",
+                controller: "controller.main as vm",
+                controllerAs: "vm"
+
+            })
+            .when("/:query", {
                 templateUrl: "views/main.html",
                 controller: "controller.main as vm",
                 controllerAs: "vm"

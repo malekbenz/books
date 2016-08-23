@@ -4,21 +4,16 @@
     angular.module("app")
         .controller("controller.book", controller);
 
-    controller.$inject = ["$http", "$routeParams"];
+    controller.$inject = ["dataservice", "$routeParams"];
 
-    function controller($http, $routeParams) { 
-
+    function controller(dataservice, $routeParams) {
         var self = this;
-        var url = "http://it-ebooks-api.info/v1/book/" + $routeParams.id;
-
-        $http.get(url).then(
-            function success(data) {
-                self.book = data.data;
-                // console.log(self.book);
+        dataservice.getBook($routeParams.id)
+            .then(function success(response) {
+                self.book = response;
             },
             function error(err) {
                 console.log(err);
-            }
-        );
+            });
     }
-}());
+} ());

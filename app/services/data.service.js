@@ -7,37 +7,34 @@
     dataservice.$inject = ['$http'];
 
     function dataservice($http) {
-        var url = "http://it-ebooks-api.info/v1/search/";
-        //url = url + "/page/" + pageSearch;
+        var url = "http://it-ebooks-api.info/v1/";
 
         return {
             getBooks: getBooks,
-            getBooksByPage: getBooksByPage
-
+            getBook: getBook
         };
 
-        function getBooksByPage(title, page) {
-            var myUrl = url + title + "/page/" + page;
-            console.log("title", title);
-            console.log("page", page);
+        function getBook(Id) {
+            var myUrl = url + "/book/" + Id;
             return $http.get(myUrl)
                 .then(getBooksComplete)
                 .catch(getBooksFailed);
-        }
+        };
 
-        function getBooks(title) {
-            var myUrl = url + title;
-            console.log("title", title);
+        function getBooks(query, page) {
+            var myUrl = url + "search/" + query + "/page/" + (page || 1);
+            
             return $http.get(myUrl)
                 .then(getBooksComplete)
                 .catch(getBooksFailed);
-        }
+        };
 
         function getBooksComplete(response) {
             return response.data;
-        }
+        };
+
         function getBooksFailed(error) {
             logger.error('XHR Failed for getAvengers.' + error.data);
-        }
+        };
     }
 } ());

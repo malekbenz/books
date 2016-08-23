@@ -12,8 +12,7 @@
             bindings:
             {
                 books: "<",
-                pages: "<",
-                term: "<"
+                pages: "<"
             }
         });
 } ());
