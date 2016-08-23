@@ -5,22 +5,18 @@
 
         .controller("controller.main", controller);
 
-    controller.$inject = ["dataservice", "$routeParams"];
+    controller.$inject = ["dataservice", "$routeParams","$location"];
 
-    function controller(dataservice, $routeParams) {
+    function controller(dataservice, $routeParams,$location) {
         var self = this;
-        
+         
 
         self.pages = {};
         self.search = searchBook;
         init();
 
         function searchBook() {
-            
-            dataservice
-                .getBooks(self.pages.query, self.pages.page )
-                .then(success, error);
-
+            $location.path('/'+ self.pages.query);   
         };
 
         function init() {
