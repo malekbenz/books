@@ -6,7 +6,7 @@
 
     configure.$inject = ["$routeProvider"];
 
-    function configure($routeProvider) {
+    function configure($routeProvider ) {
         $routeProvider
             .when("/book/:id", {
                 templateUrl: "views/book.html",
@@ -34,5 +34,9 @@
             })
             .otherwise({ redirectTo: '/' });
         //  $locationProvider.html5Mode(true);
+
+        //ng-storage config
+        //  $localStorageProvider.setKeyPrefix('bookstore');
+
     }
 } ());

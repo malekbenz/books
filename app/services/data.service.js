@@ -4,16 +4,17 @@
         .module('app')
         .factory('dataservice', dataservice);
 
-    dataservice.$inject = ['$http'];
+    dataservice.$inject = ['$http', 'storage', '$cacheFactory'];
 
-    function dataservice($http) {
+    function dataservice($http, storage, $cacheFactory) {
         var url = "http://it-ebooks-api.info/v1/";
+
+        var httpDefaultCache = $cacheFactory.get('$http');
 
         return {
             getBooks: getBooks,
             getBook: getBook
         };
-
         function getBook(Id) {
             var myUrl = url + "/book/" + Id;
             return $http.get(myUrl)
@@ -21,10 +22,15 @@
                 .catch(getBooksFailed);
         };
 
+
         function getBooks(query, page) {
             var myUrl = url + "search/" + query + "/page/" + (page || 1);
-            
-            return $http.get(myUrl)
+            console.log("myUrl", myUrl);
+
+            var cachedData = httpDefaultCache.get('http://it-ebooks-api.info/v1/search/javascript/page/1');
+            console.log("httpDefaultCache : ", cachedData);
+
+            return $http.get(myUrl, { cache: true })
                 .then(getBooksComplete)
                 .catch(getBooksFailed);
         };
