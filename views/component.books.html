@@ -1,12 +1,17 @@
-<div class="row">
-    <div class="col-xs-6 col-sm-4" ng-repeat="item in vm.books">
-        <a href="/#/book/{{item.ID}}" class="thumbnail">
-            <img ng-src="{{item.Image}}" class="img-fluid" alt="...">
-        </a>
+<div ng-show="vm.books.length">
+    <div class="row" >
+        <div class="col-xs-6 col-sm-4" ng-repeat="item in vm.books">
+            <a href="/#/book/{{item.ID}}" class="thumbnail">
+                <img ng-src="{{item.Image}}" class="img-fluid" alt="...">
+            </a>
+        </div>
+        
     </div>
+
+    <component.pagination total="vm.pages.total" current="vm.pages.current" query="vm.pages.query"></component.pagination>
+
+</div>
+<div ng-hide="vm.books.length">
+    <h1 class="lead text-center">No book found</h1>
 </div>
 
-<component.pagination total="vm.pages.total" current="vm.pages.current" query="vm.pages.query">
-
-</component.pagination>
-</div>
