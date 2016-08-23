@@ -1,6 +1,8 @@
 (function () {
     "use strict";
 
-    angular.module("app", ['ngRoute','LocalStorageModule'])
+    angular.module("app", ['ngRoute', 'ngStorage']);
 
-}());
+    
+
+} ());

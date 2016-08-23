@@ -5,11 +5,11 @@
 
         .controller("controller.main", controller);
 
-    controller.$inject = ["dataservice", "$routeParams","$location"];
+    controller.$inject = ["dataservice", "$routeParams","$location", "$localStorage"];
 
-    function controller(dataservice, $routeParams,$location) {
+    function controller(dataservice, $routeParams,$location, $localStorage) {
         var self = this;
-         
+         console.log($localStorage);
 
         self.pages = {};
         self.search = searchBook;

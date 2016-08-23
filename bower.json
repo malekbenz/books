@@ -15,6 +15,9 @@
     "tests"
   ],
   "dependencies": {
-    "angular-local-storage": "^0.4.0"
+    
+  },
+  "devDependencies": {
+    "ngstorage": "^0.3.11"
   }
 }
