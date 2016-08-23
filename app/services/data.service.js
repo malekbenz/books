@@ -9,7 +9,7 @@
     function dataservice($http, storage, $cacheFactory) {
         var url = "http://it-ebooks-api.info/v1/";
 
-        var httpDefaultCache = $cacheFactory.get('$http');
+        var httpCache = $cacheFactory.get('$http');
 
         return {
             getBooks: getBooks,
@@ -27,8 +27,8 @@
             var myUrl = url + "search/" + query + "/page/" + (page || 1);
             console.log("myUrl", myUrl);
 
-            var cachedData = httpDefaultCache.get('http://it-ebooks-api.info/v1/search/javascript/page/1');
-            console.log("httpDefaultCache : ", cachedData);
+            var cachedData = httpCache.get('http://it-ebooks-api.info/v1/search/javascript/page/1');
+            console.log("httpCache : ", cachedData);
 
             return $http.get(myUrl, { cache: true })
                 .then(getBooksComplete)
