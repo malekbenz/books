@@ -6,20 +6,16 @@
         .module('app')
         .factory('storage', storage)
 
-
     storage.$inject = ['$localStorage'];
 
     function storage($localStorage) {
         return {
-            message: message,
             getBooks: getBooks,
             setBooks: setBooks
         };
 
         function getBooks(url) {
-            
-            var result = $localStorage[url];
-            return result;
+            return $localStorage[url];
         }
         function setBooks(url, books) {
             $localStorage[url] = books;
