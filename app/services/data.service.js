@@ -8,8 +8,11 @@
 
     function dataservice($http, storage, $cacheFactory) {
         var url = "http://it-ebooks-api.info/v1/";
-
+        
         var httpCache = $cacheFactory.get('$http');
+        if (!httpCache) {
+            var httpCache = $cacheFactory('$http');
+        }
 
         return {
             getBooks: getBooks,
@@ -28,7 +31,8 @@
             console.log("myUrl", myUrl);
 
             var cachedData = httpCache.get('http://it-ebooks-api.info/v1/search/javascript/page/1');
-            console.log("httpCache : ", cachedData);
+            console.log("httpCache : ", httpCache);
+            console.log("cachedData : ", cachedData);
 
             return $http.get(myUrl, { cache: true })
                 .then(getBooksComplete)
