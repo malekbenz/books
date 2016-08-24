@@ -15,9 +15,9 @@
     "tests"
   ],
   "dependencies": {
+    "ngstorage": "^0.3.11"
     
   },
   "devDependencies": {
-    "ngstorage": "^0.3.11"
   }
 }

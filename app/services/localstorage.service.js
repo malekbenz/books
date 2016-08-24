@@ -5,12 +5,7 @@
     angular
         .module('app')
         .factory('storage', storage)
-        .factory('myCache', myCache);
 
-    myCache.$inject = ['$cacheFactory'];
-    function myCache($cacheFactory) {
-        return $cacheFactory('myData');
-    };
 
     storage.$inject = ['$localStorage'];
 
@@ -22,12 +17,8 @@
         };
 
         function getBooks(url) {
-            console.log("From cache");
-
-            console.log("cache ", url);
+            
             var result = $localStorage[url];
-
-            console.log("cache  result ", result);
             return result;
         }
         function setBooks(url, books) {

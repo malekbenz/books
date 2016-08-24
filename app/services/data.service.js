@@ -4,15 +4,11 @@
         .module('app')
         .factory('dataservice', dataservice);
 
-    dataservice.$inject = ['$http', 'storage', '$cacheFactory'];
+    dataservice.$inject = ['$http', 'storage'];
 
-    function dataservice($http, storage, $cacheFactory) {
+    function dataservice($http, storage) {
+
         var url = "http://it-ebooks-api.info/v1/";
-        
-        var httpCache = $cacheFactory.get('$http');
-        if (!httpCache) {
-            var httpCache = $cacheFactory('$http');
-        }
 
         return {
             getBooks: getBooks,
@@ -20,31 +16,32 @@
         };
         function getBook(Id) {
             var myUrl = url + "/book/" + Id;
+
             return $http.get(myUrl)
                 .then(getBooksComplete)
                 .catch(getBooksFailed);
         };
 
-
         function getBooks(query, page) {
             var myUrl = url + "search/" + query + "/page/" + (page || 1);
-            console.log("myUrl", myUrl);
 
-            var cachedData = httpCache.get('http://it-ebooks-api.info/v1/search/javascript/page/1');
-            console.log("httpCache : ", httpCache);
-            console.log("cachedData : ", cachedData);
+            var response = storage.getBooks(myUrl);
+            if (response) {
+                return Promise.resolve(response.data);
+            }
 
-            return $http.get(myUrl, { cache: true })
+            return $http.get(myUrl, { cache: false })
                 .then(getBooksComplete)
                 .catch(getBooksFailed);
         };
 
         function getBooksComplete(response) {
+            storage.setBooks(response.config.url, response);
             return response.data;
         };
 
         function getBooksFailed(error) {
-            logger.error('XHR Failed for getAvengers.' + error.data);
+            logger.error('XHR Failed .' + error.data);
         };
     }
 } ());
