@@ -14,6 +14,7 @@
             getBooks: getBooks,
             getBook: getBook
         };
+        
         function getBook(Id) {
             var myUrl = url + "/book/" + Id;
 
@@ -36,7 +37,7 @@
         };
 
         function getBooksComplete(response) {
-            storage.setBooks(response.config.url, response);
+            storage.saveBooks(response.config.url, response);
             return response.data;
         };
 

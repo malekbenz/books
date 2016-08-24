@@ -11,19 +11,24 @@
     function storage($localStorage) {
         return {
             getBooks: getBooks,
-            setBooks: setBooks
+            saveBooks: saveBooks,
+            getBook: getBook,
+            saveBook: saveBook
+
+
         };
+        function getBook(url) {
+            return $localStorage[url];
+        }
+        function saveBook(url, book) {
+            $localStorage[url] = book;
+        }
 
         function getBooks(url) {
             return $localStorage[url];
         }
-        function setBooks(url, books) {
+        function saveBooks(url, books) {
             $localStorage[url] = books;
-        }
-        function message() {
-
-            return $localStorage["http://it-ebooks-api.info/v1/search/javascript/page/1"];
-
         }
 
 
