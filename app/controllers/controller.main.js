@@ -15,8 +15,9 @@
         init();
 
         function searchBook() {
-            // $location.path('/' + self.pages.query);
-            $location.path('/');
+            $location.path('/' + self.pages.query);
+            
+            
         };
 
         function init() {
