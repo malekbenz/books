@@ -10,6 +10,15 @@
         </div>
         <!-- /.container-fluid -->
 
+        <div id="search">
+            <button type="button" class="close">×</button>
+            <div>
+                <form ng-submit="vm.search()">
+                    <input type="search" value="" ng-model="vm.pages.query" placeholder="type here" />
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+        </div>
 
     </nav>
 </div>
