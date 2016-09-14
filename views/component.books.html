@@ -1,6 +1,6 @@
 <div ng-show="vm.books.length">
     <div class="row" >
-        <div class="col-xs-6 col-sm-3" ng-repeat="item in vm.books">
+        <div class="col-xs-6 col-sm-6" ng-repeat="item in vm.books">
             <a href="/#/book/{{item.ID}}" class="thumbnail">
                 <img ng-src="{{item.Image}}" class="img-fluid" alt="...">
             </a>
