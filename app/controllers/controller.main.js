@@ -12,12 +12,12 @@
 
         self.pages = {};
         self.search = searchBook;
+        self.showsearch = false;
         init();
 
         function searchBook() {
             $location.path('/' + self.pages.query);
-            
-            
+            self.showsearch = false;
         };
 
         function init() {
