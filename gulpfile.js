@@ -52,7 +52,7 @@ gulp.task('images', ['clean'], function () {
 gulp.task('watch', function () {
     gulp.watch(paths.scripts.srcWatch, ['scripts']);
     gulp.watch(paths.css.srcWatch, ['minify-css']);
-    // gulp.watch(paths.images, ['images']);
+    console.log("gulp is watching your files ");
 });
 
 // The default task (called when you run `gulp` from cli)

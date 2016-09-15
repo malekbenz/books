@@ -4,7 +4,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="#search" class="btn btn-success"> Search <span class="glyphicon glyphicon-search"></span>
+                        <a href="#search" class="btn btn-success" > Search <span class="glyphicon glyphicon-search"></span>
                         </a>
                     </li>
                 </ul>
@@ -31,11 +31,12 @@
 
 </div>
 
-        <div id="search">
+        <div id="search" >
             <button type="button" class="close">×</button>
+            
             <div>
                 <form ng-submit="vm.search()">
-                    <input type="search" value="" ng-model="vm.pages.query" placeholder="type here" />
+                    <input type="search" value="" id="query" ng-model="vm.pages.query" placeholder="type here" />
                     <button type="submit" class="btn btn-primary">Search</button>
                 </form>
             </div>

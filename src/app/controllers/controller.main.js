@@ -9,19 +9,19 @@
 
     function controller(dataservice, $routeParams, $location) {
         var self = this;
-
+        console.log("Start controller");
         self.pages = {};
         self.search = searchBook;
+        self.showsearch = false;
         init();
 
         function searchBook() {
             $location.path('/' + self.pages.query);
-            
-            
+            self.showsearch = false;
         };
 
         function init() {
-
+            console.log("excute init function controller");
             self.books = [];
             self.pages.total = 0;
             self.pages.current = $routeParams.page || 1;
@@ -46,9 +46,6 @@
         function error(err) {
             console.log(err);
         };
-
-        self.tables = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
-
 
     };
 } ());        

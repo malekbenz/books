@@ -35,7 +35,7 @@
             .otherwise({ redirectTo: '/' });
         //  $locationProvider.html5Mode(true);
 
-        //ng-storage config
+        // ng-storage config
         //  $localStorageProvider.setKeyPrefix('bookstore');
 
     }
