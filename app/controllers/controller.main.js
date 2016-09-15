@@ -21,7 +21,7 @@
         };
 
         function init() {
-
+            
             self.books = [];
             self.pages.total = 0;
             self.pages.current = $routeParams.page || 1;

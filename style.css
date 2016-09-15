@@ -109,7 +109,7 @@
         z-index: 3;   
     }
 
-/* end butto n search */
+/* End button search */
 
 
 
@@ -118,6 +118,12 @@
 .thumbnail{        
     /*width: 220px; */
     height: 180px;
+    overflow: auto;
+}
+.thumbnail-mobile{        
+    /*width: 220px; */
+    height: 350px;
+	wid
     overflow: auto;
 }
 
