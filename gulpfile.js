@@ -8,15 +8,15 @@ var minifyCss = require("gulp-minify-css");
 
 var paths = {
     scripts: {
-        srcWatch: ['./app/**/*.js','./js/*.js'],
+        srcWatch: ['./src/app/**/*.js','./js/*.js'],
   
-        src: ["./app/app.js", "./app/settings/*.js", "./app/services/*.js"
-            , "./app/components/*.js", "./app/controllers/*.js", "./js/*.js" ],
+        src: ["./src/app/app.js", "./src/app/settings/*.js", "./src/app/services/*.js"
+            , "./src/app/components/*.js", "./src/app/controllers/*.js", "./src/js/*.js" ],
         dest: "./dist/js/"
     },
     css: {
-        srcWatch: ["./style.css"],
-        src: ["./style.css"],
+        srcWatch: ["./src/style.css"],
+        src: ["./src/style.css"],
         dest: "./dist/css/"
     },
     images: 'client/img/**/*'
