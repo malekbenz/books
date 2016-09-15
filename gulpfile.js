@@ -11,7 +11,7 @@ var paths = {
         srcWatch: ['./app/**/*.js','./js/*.js'],
   
         src: ["./app/app.js", "./app/settings/*.js", "./app/services/*.js"
-            , "./app/components/*.js", "./app/controllers/*.js", "./js/*.js" ],
+            , "./app/components/*.js", "./app/controllers/*.js"], //, "./js/*.js" 
         dest: "./dist/js/"
     },
     css: {
