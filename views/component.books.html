@@ -1,12 +1,12 @@
 <div ng-show="vm.books.length">
     <div class="row" >
-        <div class="hidden-xs col-xs-6 col-sm-3" ng-repeat="item in vm.books">
+        <div class="hidden-xs hidden-sm col-md-3" ng-repeat="item in vm.books">
             <a href="/#/book/{{item.ID}}" class="thumbnail">
                 <img ng-src="{{item.Image}}" class="img-fluid" alt="...">
             </a>
         </div>
 
-        <div class="visible-xs col-xs-6" ng-repeat="item in vm.books">
+        <div class="visible-xs visible-sm col-xs-6 col-sm-6" ng-repeat="item in vm.books">
             <a href="/#/book/{{item.ID}}" class="thumbnail thumbnail-mobile">
                 <img ng-src="{{item.Image}}" class="img-fluid" alt="...">
             </a>
