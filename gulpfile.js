@@ -15,8 +15,8 @@ var paths = {
         dest: "./dist/js/"
     },
     css: {
-        srcWatch: ["./src/style.css"],
-        src: ["./src/style.css"],
+        srcWatch: ["./src/css/style.css"],
+        src: ["./src/css/*.css"],
         dest: "./dist/css/"
     },
     images: 'client/img/**/*'
