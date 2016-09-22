@@ -37,10 +37,8 @@
 
         function getBookComplete(response) {
             response.data.Image = response.data.Image.replace("http","https");
-            console.log("Books :", response.data);
 
             storage.saveBooks(response.config.url, response);
-            // console.log("response.data.Books ", response.data.Books);                    
             return response.data;
         };
 
@@ -50,7 +48,6 @@
                     book.Image = book.Image.replace("http","https");
                     });
             storage.saveBooks(response.config.url, response);
-            // console.log("response.data.Books ", response.data.Books);                    
             return response.data;
         };
 
