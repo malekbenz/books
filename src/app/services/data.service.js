@@ -18,7 +18,7 @@
         function getBook(Id) {
             var myUrl = url + "/book/" + Id;
             return $http.get(myUrl)
-                .then(getBooksComplete)
+                .then(getBookComplete)
                 .catch(getBooksFailed);
         };
 
@@ -35,13 +35,21 @@
                 .catch(getBooksFailed);
         };
 
-        function getBooksComplete(response) {
+        function getBookComplete(response) {
+            // console.log("Books :", response.data);
+            response.data.Image = response.data.Image.replace("http","https");
+
             storage.saveBooks(response.config.url, response);
-            var log = [];
+            // console.log("response.data.Books ", response.data.Books);                    
+            return response.data;
+        };
+
+        function getBooksComplete(response) {
             angular.forEach(response.data.Books, function(book, key) {
                     // this.push(key + ': ' + book);
                     book.Image = book.Image.replace("http","https");
-                    }, log);
+                    });
+            storage.saveBooks(response.config.url, response);
             // console.log("response.data.Books ", response.data.Books);                    
             return response.data;
         };
