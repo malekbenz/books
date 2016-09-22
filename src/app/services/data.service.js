@@ -42,6 +42,7 @@
             angular.forEach(values, function(value, key) {
                     this.push(key + ': ' + value);
                     }, log);
+            console.log("log", log);                    
             return response.data;
         };
 
