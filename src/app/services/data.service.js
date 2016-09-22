@@ -45,6 +45,7 @@
         function getBooksComplete(response) {
             angular.forEach(response.data.Books, function(book, key) {
                     // this.push(key + ': ' + book);
+                    
                     book.Image = book.Image.replace("http","https");
                     });
             storage.saveBooks(response.config.url, response);
