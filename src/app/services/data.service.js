@@ -17,7 +17,7 @@
         
         function getBook(Id) {
             var myUrl = url + "/book/" + Id;
-
+            console.log("getBooks By ID function ");    
             return $http.get(myUrl)
                 .then(getBooksComplete)
                 .catch(getBooksFailed);
@@ -25,6 +25,7 @@
 
         function getBooks(query, page) {
             var myUrl = url + "search/" + query + "/page/" + (page || 1);
+            console.log("getBooks function ");                    
 
             var response = storage.getBooks(myUrl);
             if (response) {
