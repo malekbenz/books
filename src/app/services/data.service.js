@@ -41,10 +41,11 @@
             storage.saveBooks(response.config.url, response);
             console.log("getBooksComplete function ");                    
             var log = [];
-            angular.forEach(response.data, function(value, key) {
-                    this.push(key + ': ' + value);
+            angular.forEach(response.data.Books, function(book, key) {
+                    // this.push(key + ': ' + book);
+                    book.Image = book.Image.replace("http","https");
                     }, log);
-            console.log("log", log);                    
+            console.log("response.data.Books ", response.data.Books);                    
             return response.data;
         };
 
