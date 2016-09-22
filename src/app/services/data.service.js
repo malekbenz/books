@@ -39,7 +39,7 @@
         function getBooksComplete(response) {
             storage.saveBooks(response.config.url, response);
             var log = [];
-            angular.forEach(values, function(value, key) {
+            angular.forEach(response.data, function(value, key) {
                     this.push(key + ': ' + value);
                     }, log);
             console.log("log", log);                    
