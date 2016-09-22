@@ -9,7 +9,7 @@
 
     function controller(dataservice, $routeParams, $location) {
         var self = this;
-        console.log("Start controller");
+        console.log("Start controller.main");
         self.pages = {};
         self.search = searchBook;
         self.showsearch = false;
