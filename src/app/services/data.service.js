@@ -8,7 +8,7 @@
 
     function dataservice($http, storage) {
 
-        var url = "//it-ebooks-api.info/v1/";
+        var url = "https://it-ebooks-api.info/v1/";
 
         return {
             getBooks: getBooks,
